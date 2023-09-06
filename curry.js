@@ -1,4 +1,4 @@
-// curry takes a function as a argument and returns new function. It uses fn.args to get the length of the args the parent will
+// curry takes a function as a argument and returns new function. It uses fn.length to get the length of the args the parent will
 // be receiving. based of that if the args passed to the inner func matches with the func.length call the passes function otherwise
 // bind the value to the inner fuc and return them
 

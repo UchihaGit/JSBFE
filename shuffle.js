@@ -27,7 +27,7 @@ function shuffle2(arr) {
   return arr;
 }
 
-// remember to go decreasingly.
+// can go both increasing and decreasingly.
 function shuffle(arr) {
   // modify the arr inline to change the order randomly
   let j;
