@@ -80,6 +80,32 @@ function flat(arr, depth = 1) {
 const arr = [1, [2], [3, [4]]];
 console.log(flat(arr));
 
+// BRUTEFORE ITERATIVE IMPLEMENTATION
+function flat(arr, depth = 1) {
+  let result = arr.slice();
+
+  if (depth === Infinity) {
+    while (result.some(Array.isArray)) {
+      result = result.reduce((acc, val) => acc.concat(Array.isArray(val) ? val : [val]), []);
+    }
+  } else {
+    for (let i = 0; i < depth; i++) {
+      result = result.reduce((acc, val) => {
+        if(Array.isArray(val)){
+          console.log('if ', val, acc)
+          return acc.concat(val)
+        } else {
+          console.log('else ', [val], acc)
+          return acc.concat([val])
+        }
+      }, []);
+    }
+  }
+
+  return result;
+}
+
+
 //iterative
 //todo
 console.log(flat([1, [2], [3, [4]]]));
