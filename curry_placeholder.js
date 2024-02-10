@@ -1,5 +1,10 @@
 // curry_placeholder;
 
+// Currying with a Placeholder:
+
+// When you curry a function with a placeholder, you allow partial application of arguments using the placeholder (_ in this case).
+// For example, in curriedJoin(_, 2)(1, 3), the goal is to replace the placeholders in the first call with actual values from the subsequent calls.
+
 function curry(fn) {
   return function curried(...args) {
     // if number of arguments match
